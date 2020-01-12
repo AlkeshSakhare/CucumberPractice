@@ -15,10 +15,10 @@ public class ProductListingPage {
 		PageFactory.initElements(driver, this);
 	}
 
-	@FindBy(how = How.CSS, using = "button.single_add_to_cart_button")
+	@FindBy(how = How.XPATH, using = "//button[contains(@class,'single_add_to_cart_button button alt disabled wc-variation-selection-needed')]")
 	private WebElement btn_AddToCart;
 
-	@FindAll(@FindBy(how = How.CSS, using = ".noo-product-inner"))
+	@FindAll(@FindBy(how = How.XPATH, using = "//div[@class='noo-product-inner']"))
 	private List<WebElement> prd_List;
 
 	public void clickOn_AddToCart() {
